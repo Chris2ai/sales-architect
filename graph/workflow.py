@@ -40,18 +40,45 @@ def node_reviewer(state: WorkflowState) -> WorkflowState:
     return {"review": review_result}
 
 def node_finalize(state: WorkflowState) -> WorkflowState:
-    """节点4：整合最终方案书"""
+    """节点4：整合最终方案书（专业化模板）"""
     print("📄 正在整合方案书...")
-    final = f"""# 售前方案书
+    final = f"""---
+title: "售前方案书"
+author: "MultiAgent-SalesArchitect"
+date: "{__import__('datetime').datetime.now().strftime('%Y-%m-%d')}"
+---
+
+# 🏗️ 售前方案书
+
+> **项目名称**：{state.get('raw_requirement', '未提供')[:80]}  
+> **生成时间**：{__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M')}  
+> **生成方式**：三 Agent 协作（需求分析 → 方案设计 → 技术评审）
+
+---
+
+## 📑 目录
+1. [需求分析](#一需求分析)
+2. [技术方案](#二技术方案)
+3. [技术评审](#三技术评审)
+
+---
 
 ## 一、需求分析
 {state["analysis"]}
 
+---
+
 ## 二、技术方案
 {state["proposal"]}
 
+---
+
 ## 三、技术评审
 {state["review"]}
+
+---
+
+> 本方案书由 AI 多智能体协作自动生成，仅供参考。实际部署前需结合客户具体场景进行人工复核与调整。
 """
     return {"final_doc": final}
 
