@@ -19,6 +19,11 @@
 | 大模型 | 通义千问 (qwen-turbo) | 三个 Agent 共用 |
 | 前端 | Streamlit | Web 交互界面 |
 
+## 📝 相关文章
+
+- [MultiAgent-SalesArchitect：基于 LangGraph 的售前方案多智能体协作系统](https://blog.csdn.net/mz_2000/article/details/161185261?ops_request_misc=elastic_search_misc&request_id=c4f931a5da32ceccf883115bbb022c43&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~ElasticSearch~search_v2-1-161185261-null-null.142^v102^pc_search_result_base2&utm_term=MultiAgent-SalesArchitect%EF%BC%9A%E5%9F%BA%E4%BA%8E%20LangGraph%20%E7%9A%84%E5%94%AE%E5%89%8D%E6%96%B9%E6%A1%88%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%8D%8F%E4%BD%9C%E7%B3%BB%E7%BB%9F&spm=1018.2226.3001.4187)
+
+
 ## 🚀 快速开始
 
 ### 环境要求
